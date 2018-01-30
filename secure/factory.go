@@ -29,10 +29,8 @@ func EncryptFactory(method string) (SecureEncoder, error) {
 		switch method {
 		case MethodAES:
 			return newAesEncoder(), nil
-			break
 		case MethodHashids:
 			return newHashidsEncoder(), nil
-			break
 		}
 		return nil, errors.New("not supported")
 	}(method)
